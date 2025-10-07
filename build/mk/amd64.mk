@@ -1,5 +1,5 @@
 CC = gcc
-C_FLAGS = -mcmodel=large -ffreestanding -O2 -Wall -Werror -Wextra
+C_FLAGS = -mcmodel=large -ffreestanding -O2 -Wall -Werror -Wextra -I../include/
 
 SRC = ../kernel/arch/amd64
 
