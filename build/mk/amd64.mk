@@ -8,9 +8,10 @@ LD_FLAGS = -nostdlib -T $(SRC)/linker.ld
 
 BUILD_KERNEL:
 	mkdir -p obj
-	$(CC) $(C_FLAGS) -c $(SRC)/entry/main.c -o obj/main.o
+	$(CC) $(C_FLAGS) -c ../kernel/entry/main.c -o obj/main.o
+	$(CC) $(C_FLAGS) -c $(SRC)/arch.c -o obj/arch.o
 	$(CC) $(C_FLAGS) -c $(SRC)/cpu/gdt.c -o obj/gdt.o
-	$(LD) $(LD_FLAGS) -o $(KERNEL) obj/main.o obj/gdt.o
+	$(LD) $(LD_FLAGS) -o $(KERNEL) obj/*.o
 
 clean:
 	rm -rf obj $(KERNEL) $(ISO)
