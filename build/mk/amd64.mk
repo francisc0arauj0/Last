@@ -12,6 +12,7 @@ BUILD_KERNEL:
 	$(CC) $(C_FLAGS) -c $(SRC)/arch/amd64/arch.c -o obj/arch.o
 	$(CC) $(C_FLAGS) -c $(SRC)/arch/amd64/cpu/gdt.c -o obj/gdt.o
 	$(CC) $(C_FLAGS) -c $(SRC)/memory/memory.c -o obj/memory.o
+	$(CC) $(C_FLAGS) -c $(SRC)/memory/bump.c -o obj/bump.o
 	$(CC) $(C_FLAGS) -c $(SRC)/graphical/framebuffer.c -o obj/framebuffer.o
 	$(LD) $(LD_FLAGS) -o $(KERNEL) obj/*.o
 
