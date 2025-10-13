@@ -7,17 +7,17 @@
     </a>
 </p>
 
-### Quick Links
+## Quick Links
 [Source Code](https://github.com/francisc0arauj0/Last)
 
-### About Last OS
+## About Last OS
 Last OS is a 64-bit hobby operating system developed by a single programmer, with the ambitious goal of making it compatible with all architectures.
 
 The project aims to explore the fundamentals of operating systems, always focusing on learning, performance, and portability.
 
 Built entirely from scratch, Last OS demonstrates what can be achieved with curiosity, persistence, and a healthy dose of technical stubbornness.
 
-### Product quality warning
+## Product quality warning
 **⚠️ Warning:** Last OS is still in development and not ready for general use. 
 It may contain bugs, crashes, and other weird behavior, test it at your own risk!
 
