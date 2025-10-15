@@ -1,5 +1,5 @@
 CC = gcc
-C_FLAGS = -g -mcmodel=large -ffreestanding -mno-sse -O2 -Wall -Werror -Wextra -I../kernel/include/
+C_FLAGS = -g -mcmodel=large -ffreestanding -O2 -Wall -Werror -Wextra -I../kernel/include/
 
 SRC = ../kernel
 
@@ -11,6 +11,7 @@ BUILD_KERNEL:
 	$(CC) $(C_FLAGS) -c $(SRC)/entry/main.c -o obj/main.o
 	$(CC) $(C_FLAGS) -c $(SRC)/arch/amd64/arch.c -o obj/arch.o
 	$(CC) $(C_FLAGS) -c $(SRC)/arch/amd64/cpu/gdt.c -o obj/gdt.o
+	$(CC) $(C_FLAGS) -c $(SRC)/arch/amd64/cpu/sse.c -o obj/sse.o
 	$(CC) $(C_FLAGS) -c $(SRC)/memory/memory.c -o obj/memory.o
 	$(CC) $(C_FLAGS) -c $(SRC)/memory/bump.c -o obj/bump.o
 	$(CC) $(C_FLAGS) -c $(SRC)/memory/data-structs/bitmap.c -o obj/bitmap.o
